@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Subject Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic img</th>
+      <th>Description</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Subject</th>
+      <th>Template</th>
+      <th>Style</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subject_data.each do |subject_datum| %>
+      <tr>
+        <td><%= subject_datum.topic_img %></td>
+        <td><%= subject_datum.description %></td>
+        <td><%= subject_datum.start_time %></td>
+        <td><%= subject_datum.end_time %></td>
+        <td><%= subject_datum.subject %></td>
+        <td><%= subject_datum.template %></td>
+        <td><%= subject_datum.style %></td>
+        <td><%= subject_datum.type %></td>
+        <td><%= link_to 'Show', subject_datum %></td>
+        <td><%= link_to 'Edit', edit_subject_datum_path(subject_datum) %></td>
+        <td><%= link_to 'Destroy', subject_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject datum', new_subject_datum_path %>

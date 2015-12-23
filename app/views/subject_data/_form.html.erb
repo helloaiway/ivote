@@ -1,0 +1,49 @@
+<%= form_for(@subject_datum) do |f| %>
+  <% if @subject_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subject_datum.errors.count, "error") %> prohibited this subject_datum from being saved:</h2>
+
+      <ul>
+      <% @subject_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :topic_img %><br>
+    <%= f.text_field :topic_img %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.number_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :template %><br>
+    <%= f.number_field :template %>
+  </div>
+  <div class="field">
+    <%= f.label :style %><br>
+    <%= f.number_field :style %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
