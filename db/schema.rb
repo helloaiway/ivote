@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223052832) do
+ActiveRecord::Schema.define(version: 20151223085230) do
+
+  create_table "options", force: :cascade do |t|
+    t.string   "title",         limit: 255
+    t.integer  "subject",       limit: 4
+    t.string   "thumb",         limit: 255
+    t.integer  "select_counts", limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "subject_data", force: :cascade do |t|
+    t.string   "topic_img",   limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "subject",     limit: 4
+    t.integer  "template",    limit: 4
+    t.integer  "style",       limit: 4
+    t.string   "type",        limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "user",       limit: 4
+    t.integer  "topic",      limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

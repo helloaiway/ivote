@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic img:</strong>
+  <%= @subject_datum.topic_img %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @subject_datum.description %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @subject_datum.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @subject_datum.end_time %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @subject_datum.subject %>
+</p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @subject_datum.template %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @subject_datum.style %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @subject_datum.type %>
+</p>
+
+<%= link_to 'Edit', edit_subject_datum_path(@subject_datum) %> |
+<%= link_to 'Back', subject_data_path %>

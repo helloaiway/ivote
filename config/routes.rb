@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :subject_data
+  resources :options
+  resources :subjects
   devise_for :users
+  root "subjects#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

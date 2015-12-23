@@ -1,0 +1,396 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"retry",
+				"retry_times"
+			],
+			[
+				"per",
+				"PER_PAGE"
+			],
+			[
+				"Per",
+				"PER_PAGE"
+			],
+			[
+				"RETR",
+				"MAX_RETRY_TIMES"
+			],
+			[
+				"total",
+				"total_pages"
+			],
+			[
+				"is",
+				"is_kids"
+			],
+			[
+				"val",
+				"values_of"
+			],
+			[
+				"foo",
+				"followers"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"rem",
+				"remember_digest"
+			],
+			[
+				"session",
+				"session_params"
+			],
+			[
+				"p",
+				"params"
+			],
+			[
+				"pass",
+				"password_confirmation"
+			],
+			[
+				"si",
+				"Singleton"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "Package Control: inst",
+		"selected_items":
+		[
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"install",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/active/Documents/workspace/projects/ivote"
+	],
+	"file_history":
+	[
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts/application.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/int12.rb",
+		"/Users/active/Documents/workspace/projects/vote/Gemfile",
+		"/Users/active/Documents/workspace/projects/vote/config/database.yml",
+		"/Users/active/Documents/workspace/projects/a3/config/environments/development.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_generator/a3_generator/event.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/sitemap_kids.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_generator/a3_generator/base.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/mailers/path_mailer.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/mailers/sitemap_mailer.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/tasks/remove_blacklist_attr_path.rake",
+		"/Users/active/Documents/workspace/projects/a3/config/actv.yml",
+		"/Users/active/Documents/workspace/projects/a3/app/workers/glass_signup_worker.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/helpers/asset_helper.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/application_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/home_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/alerts_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/user.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/kids_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/int11.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/jenkins.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/int07.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/int10.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/int05.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_generator/a3_generator/article.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/kids_sitemap.rb",
+		"/Users/active/Documents/workspace/projects/ddd",
+		"/Users/active/Documents/workspace/projects/a3/app/models/activity_ribbons_policy/base.rb",
+		"/Users/active/Documents/workspace/projects/a3pi/app/models/api/v2/search/search.rb",
+		"/Users/active/Documents/workspace/projects/a3/Gemfile",
+		"/Users/active/Documents/workspace/projects/a3pi/config/initializers/tire.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/organizers.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/articles.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_generator/a3_generator/organizer.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/events.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/paths.rb",
+		"/Users/active/Documents/workspace/projects/a3/.gitignore",
+		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/provider.rb",
+		"/Users/active/Documents/workspace/projects/a3/a3.sublime-project",
+		"/Users/active/Documents/workspace/projects/a3pi/app/controllers/v2/events_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3pi/app/models/api/v2/search/retryable_search.rb",
+		"/Users/active/Documents/workspace/test",
+		"/Users/active/Documents/workspace/projects/a3pi/app/controllers/v2/search_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3pi/app/models/api/v2/category.rb",
+		"/Users/active/Documents/workspace/projects/a3pi/app/controllers/v2/asset_service_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/public/assets/sitemaps/active/sitemap1.xml",
+		"/Users/active/Documents/workspace/projects/a3/public/assets/sitemaps/sitemap.xml",
+		"/Users/active/Documents/workspace/projects/a3/app/views/my_profile/_form.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/app/views/my_profile/edit.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/concerns/current_personable.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/person.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/helpers/cookie_helper.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/user_home_address.rb",
+		"/Users/active/Documents/private/english/01.txt",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/api/api_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/initializers/devise.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/api/v1/kids_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/users/omniauth_callbacks_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/api/v1/kid_interests_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/oauth.yml",
+		"/Users/active/Documents/workspace/projects/a3/app/models/air_traffic/router.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/air_traffic_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/users/sessions_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/assets/javascripts/rails/controllers/asset_service_controller.js",
+		"/Users/active/Documents/workspace/projects/a3/app/assets/javascripts/rails/controllers/articles_controller.js",
+		"/Users/active/Documents/workspace/projects/a3/app/models/stats.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/asset_service_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/application.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/landing_page_factory.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/assets/stylesheets/application.css",
+		"/Users/active/Documents/workspace/projects/a3/config/environments/production.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/exhibits/asset_exhibit_base.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/exhibits/event_exhibit.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/kid.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/path.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/asset_loader.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/exhibits/article_exhibit.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/views/asset_service/show_dynamic.js.erb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/kid_interest.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/interest.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/views/articles/show.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/articles_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/helpers/article_helper.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/air_traffic/lpf_route.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/cms_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/assets/javascripts/libs/ckeditor/ckeditor.js",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/show.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/comments/new.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/comments/_list.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/comments/_form.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/comments_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/air_traffic/route.rb",
+		"/Users/active/Documents/workspace/projects/a3/doc/integration_servers.md",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/config/routes.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/int14.rb",
+		"/Users/active/Documents/workspace/projects/a3/lib/ext/string.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/show.json.jbuilder",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/users_helper.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/application_controller.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/sessions/new.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/index.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/follows_helper.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/comments_helper.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/mircoposts_helper.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/config/environment.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/_form.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/assets/stylesheets/scaffolds.scss",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/mircopost.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/message.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/messages_controller.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/Gemfile",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts/_header.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/sessions_helper.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/user.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/controllers/session_controller_spec.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/requests/users_signups_spec.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/requests/users_logins_spec.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/requests/site_layouts_spec.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/test/integration/users_login_test.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/users_controller.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts/_footer.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/assets/stylesheets/custom.css.scss",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/sessions_controller.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/application_helper.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/users/_signup_form.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/users/show.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/session_controller.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/test/integration/users_signup_test.rb"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/active/Documents/workspace/projects/a3/",
+			"/Users/active/Documents/workspace/projects/a3/app",
+			"/Users/active/Documents/workspace/projects/a3/",
+			"/Users/active/Documents/workspace/projects/a3/app"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"PathMailer",
+			"branch",
+			"mail",
+			"logger",
+			"l",
+			"host",
+			"RetryableSearch",
+			"binding",
+			"def current_person",
+			"current_person",
+			"update_person",
+			"pop-ups",
+			"there are",
+			"sprokets",
+			"get_exhibit",
+			"running",
+			"lake-buena-vista-fl",
+			"render_legacy_article",
+			"view",
+			"page_content",
+			"render_legacy_article",
+			"render_article_content",
+			"Interested you are in ",
+			"Star Wars",
+			"<em>Star Wars",
+			"articles",
+			"running",
+			"kids",
+			"delega",
+			"dele",
+			"air",
+			">\n",
+			"end",
+			"'\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ivote.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 333.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
