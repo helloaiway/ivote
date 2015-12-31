@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :styles
   resources :templates
   resources :subject_data
   resources :options
