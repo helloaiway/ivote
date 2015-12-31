@@ -3,6 +3,15 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/active/Documents/workspace/projects/rails-practice/blog"
+		},
+		{
+			"path": "/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example"
+		},
+		{
+			"path": "/Users/active/Documents/workspace/projects/a3"
 		}
 	]
 }

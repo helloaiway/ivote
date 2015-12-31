@@ -1,2 +1,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+	font-family:"Pingfang SC", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans
+}
+
+#files{
+	div{
+		display:inline-block;
+		padding:5px;
+	}
+}
+.progress{
+	height:10px;
+	width:200px;
+	margin-bottom:0;
+}
+#progress{
+	display:inline-block;
+	.progress-bar{
+	}
+}
+.upload-file{
+	display:table;
+	span.fileinput-button{
+		display:table-cell;
+		vertical-align:middle;
+	}
+	.upload-progress{
+		display: inline-block;
+	    margin-left: 10px;
+	    margin-top: 8px;
+	    margin-bottom: 0;
+	}
+}

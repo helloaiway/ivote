@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery-fileupload/vendor/load-image.all.min
+//= require jquery-fileupload/vendor/canvas-to-blob
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/jquery.fileupload-process
+//= require jquery-fileupload/jquery.fileupload-image
+//= require jquery-fileupload/jquery.fileupload-audio
+//= require jquery-fileupload/jquery.fileupload-video
+//= require jquery-fileupload/jquery.fileupload-validate

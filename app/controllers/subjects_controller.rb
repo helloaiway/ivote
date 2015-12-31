@@ -10,11 +10,15 @@ class SubjectsController < ApplicationController
   # GET /subjects/1
   # GET /subjects/1.json
   def show
+     @options = Option.where(subject: @subject)
+     @option = Option.new
   end
 
   # GET /subjects/new
   def new
     @subject = Subject.new
+    @subject_datum = SubjectDatum.new
+    #@subject.subject_datum.build
   end
 
   # GET /subjects/1/edit
@@ -25,11 +29,18 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = Subject.new(subject_params)
-
+    binding.pry
+    @subject_data = SubjectDatum.new(subject_params[:subject_datum])
     respond_to do |format|
-      if @subject.save
-        format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
-        format.json { render :show, status: :created, location: @subject }
+      if @subject.save 
+        if @subject_data.save
+          format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
+          format.json { render :show, status: :created, location: @subject }
+        else
+          @subject.delete
+          format.html { render :new }
+          format.json { render json: @subject_data.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render :new }
         format.json { render json: @subject.errors, status: :unprocessable_entity }
@@ -69,6 +80,7 @@ class SubjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subject_params
-      params.require(:subject).permit(:name, :user, :topic)
+      params.require(:subject).permit(:name, :user_id, :topic, :subject_datum)
     end
+
 end

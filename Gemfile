@@ -29,15 +29,32 @@ gem 'devise', '~> 3.5', '>= 3.5.3'
 
 gem 'bootstrap-sass',       '3.2.0.0'
 
+gem 'will_paginate', '~> 3.0.2'
+
+gem 'simple_form', '~> 3.2'
+
+# jquery-fileupload-rails is a library that integrates jQuery File Upload for Rails 3.1 Asset Pipeline (Rails 3.2 supported).
+gem "jquery-fileupload-rails"
+
+gem "paperclip", "~> 4.3"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :test, :development do
+  gem "pry"
+  gem 'pry-doc'
+  gem 'pry-nav'
+  gem 'pry-rails'
+  gem 'pry-remote'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', "~> 2.14" # Needs to be in Dev group for rake tasks
 end
 
 group :development do

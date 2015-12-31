@@ -1,4 +1,4 @@
-Rails.application.configure do
+Ivote::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -35,6 +35,10 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:log] = true
+  # Paperclip.registered_attachments_styles_path = '/tmp/config/paperclip_attachments.yml'
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
