@@ -1,6 +1,6 @@
   <h3>Add new option</h3>
-<%= form_for(@option) do |f| %>
-<%= f.hidden_field :subject, :value => @subject.id %>
+<%= simple_form_for(@option, html: { class: 'form-horizontal'}) do |f| %>
+  <%= f.input :subject_id, :as => 'hidden', :value => @subject.id %>
   <% if @option.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@option.errors.count, "error") %> prohibited this option from being saved:</h2>
@@ -12,15 +12,9 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :thumb %><br>
-    <%= f.text_field :thumb %>
-  </div>
+  <%= f.input :title %>
+  <%= render :partial => '/uploads/basic', :locals => {:type => 'option'} %>
+  <%= f.input :thumb, :as => 'hidden' %>
   <div class="form-group">
     <%= f.label :select_counts %><br>
     <%= f.number_field :select_counts %>

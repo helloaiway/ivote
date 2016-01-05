@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229061417) do
+ActiveRecord::Schema.define(version: 20151231060514) do
 
   create_table "options", force: :cascade do |t|
     t.string   "title",         limit: 255
-    t.integer  "subject",       limit: 4
+    t.integer  "subject_id",    limit: 4
     t.string   "thumb",         limit: 255
     t.integer  "select_counts", limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "value",       limit: 255
+    t.integer  "thumbnail",   limit: 4
+    t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
@@ -27,8 +36,6 @@ ActiveRecord::Schema.define(version: 20151229061417) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer  "subject_id",  limit: 4
-    t.integer  "template",    limit: 4
-    t.integer  "style",       limit: 4
     t.string   "type",        limit: 255
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -36,11 +43,21 @@ ActiveRecord::Schema.define(version: 20151229061417) do
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.integer  "user_id",    limit: 4
-    t.integer  "topic",      limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",        limit: 255
+    t.integer  "user_id",     limit: 4
+    t.integer  "topic",       limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "template_id", limit: 4
+    t.integer  "style_id",    limit: 4
+  end
+
+  create_table "templates", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.integer  "thumbnail",   limit: 4
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "uploads", force: :cascade do |t|

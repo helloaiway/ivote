@@ -3,10 +3,9 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Subject</th>
       <th>Thumb</th>
       <th>Select counts</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -14,7 +13,6 @@
     <% @options.each do |option| %>
       <tr>
         <td><%= option.title %></td>
-        <td><%= option.subject %></td>
         <td><%= option.thumb %></td>
         <td><%= option.select_counts %></td>
         <td><%= link_to 'Show', option %></td>

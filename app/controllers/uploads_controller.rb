@@ -40,6 +40,7 @@ class UploadsController < ApplicationController
   # POST /uploads.json
   def create
     @upload = Upload.new(upload_params)
+    binding.pry
     respond_to do |format|
       if @upload.save
         format.html {
