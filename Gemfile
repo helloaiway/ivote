@@ -55,6 +55,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', "~> 2.14" # Needs to be in Dev group for rake tasks
+  gem "capybara", "~> 2.4.1"
+  gem 'poltergeist', '~> 1.5.1'
+  
+  gem 'selenium-webdriver'
+  # gem 'selenium-webdriver' #needed for selenium-billy javascript driver for capybara. used when running tests in selenium
+  gem 'puffing-billy'
 end
 
 group :development do

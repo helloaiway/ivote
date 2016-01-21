@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"act",
+				"activity_mocker"
+			],
+			[
+				"da",
+				"day_of_week"
+			],
+			[
+				"su",
+				"subject"
+			],
+			[
 				"retry",
 				"retry_times"
 			],
@@ -64,34 +76,132 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 325,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1714,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/models/subject.rb",
 			"settings":
 			{
-				"buffer_size": 80,
+				"buffer_size": 190,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/subjects/show.html.erb",
+			"file": "/Users/active/Documents/workspace/projects/a3/config/actv.yml",
 			"settings":
 			{
-				"buffer_size": 300,
+				"buffer_size": 1078,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/features/homepage_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1031,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/spec_helper.rb",
+			"settings":
+			{
+				"buffer_size": 9514,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/Gemfile.lock",
+			"settings":
+			{
+				"buffer_size": 15308,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/features/search_spec.rb",
+			"settings":
+			{
+				"buffer_size": 5172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/Gemfile",
+			"settings":
+			{
+				"buffer_size": 98,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 52 files for \"CACHE KEY\"\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/cache.rb:\n   87        end\n   88  \n   89:       Billy.log(:info, \"puffing-billy: CACHE KEY for '#{orig_url}#{body_msg}' is '#{key}'\") if log_key\n   90        key\n   91      end\n   ..\n  141        Billy.config.merge_cached_responses_whitelist.each do |disable_regex|\n  142          if url =~ disable_regex\n  143:           return disable_regex.to_s # Use the stringified regex as the cache key if it matches\n  144          end\n  145        end\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/spec/lib/billy/cache_spec.rb:\n   73        end\n   74  \n   75:       it \"has one cache key for the two analytics urls that match, and a separate one for the other that doesn't\" do\n   76          expect(cache.key('post', analytics_url1, 'body')).to eq cache.key('post', analytics_url2, 'body')\n   77          expect(cache.key('post', analytics_url1, 'body')).not_to eq cache.key('post', regular_url, 'body')\n   78        end\n   79  \n   80:       it 'More specifically, the cache keys should be identical for the 2 analytics urls' do\n   81          identical_cache_key = 'post_5fcb7a450e4cd54dcffcb526212757ee0ca9dc17'\n   82          distinct_cache_key = 'post_www.example-analytics.com_81f097654a523bd7ddb10fd4aee781723e076a1a_02083f4579e08a612425c0c1a17ee47add783b94'\n\n4 matches across 2 files\n\n\nSearching 52 files for \"store\"\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/cache.rb:\n   37      end\n   38  \n   39:     def store(method, url, request_headers, body, response_headers, status, content)\n   40        cached = {\n   41          scope: scope,\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/handlers/proxy_handler.rb:\n   41  \n   42            if cacheable?(url, response[:headers], response[:status])\n   43:             Billy::Cache.instance.store(method.downcase, url, headers, body, response[:headers], response[:status], response[:content])\n   44            end\n   45  \n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/handlers/request_handler.rb:\n   46      end\n   47  \n   48:     def restore_cache\n   49:       warn '[DEPRECATION] `restore_cache` is deprecated as cache files are dynamically checked. Use `reset_cache` if you just want to clear the cache.'\n   50        reset_cache\n   51      end\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/proxy.rb:\n    7      attr_reader :request_handler\n    8  \n    9:     def_delegators :request_handler, :stub, :reset, :reset_cache, :restore_cache, :handle_request\n   10  \n   11      def initialize\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/README.md:\n  205  different POST requests to the same URL.\n  206  \n  207: `c.cache_request_headers` is used to store the outgoing request headers in the cache.\n  208  It is also saved to yml if `persist_cache` is enabled.  This additional information\n  209  is useful for debugging (for example: viewing the referer of the request).\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/spec/lib/billy/handlers/proxy_handler_spec.rb:\n  169        it 'caches the response if cacheable' do\n  170          expect(subject).to receive(:allowed_response_code?).and_return(true)\n  171:         expect(Billy::Cache.instance).to receive(:store)\n  172          subject.handle_request(request[:method],\n  173                                 request[:url],\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/spec/lib/billy/handlers/request_handler_spec.rb:\n  137      end\n  138  \n  139:     describe '#restore_cache' do\n  140        it 'resets the cache handler' do\n  141          expect(cache_handler).to receive(:reset)\n\n8 matches across 7 files\n\n\nSearching 52 files for \"disabled_request\"\n\n/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/handlers/proxy_handler.rb:\n    9  \n   10      def handles_request?(_method, url, _headers, _body)\n   11:       !disabled_request?(url)\n   12      end\n   13  \n   ..\n   80      end\n   81  \n   82:     def disabled_request?(url)\n   83        return false unless Billy.config.non_whitelisted_requests_disabled\n   84  \n\n2 matches in 1 file\n\n\nSearching 52 files for \"on_message_complete\non_message_complete\"\n\n0 matches",
+			"settings":
+			{
+				"buffer_size": 4327,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/handlers/proxy_handler.rb",
+			"settings":
+			{
+				"buffer_size": 4252,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/cache.rb",
+			"settings":
+			{
+				"buffer_size": 4364,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_mocker.rb",
+			"settings":
+			{
+				"buffer_size": 421,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_activity_mocker.rb",
+			"settings":
+			{
+				"buffer_size": 1316,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_activity_mocker.rb",
+			"settings":
+			{
+				"buffer_size": 1338,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_article_params.rb",
+			"settings":
+			{
+				"buffer_size": 147,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_activity_params.rb",
+			"settings":
+			{
+				"buffer_size": 826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_article_mocker.rb",
+			"settings":
+			{
+				"buffer_size": 157,
 				"line_ending": "Unix"
 			}
 		}
@@ -135,31 +245,151 @@
 	"expanded_folders":
 	[
 		"/Users/active/Documents/workspace/projects/ivote/app",
-		"/Users/active/Documents/workspace/projects/ivote/app/assets",
+		"/Users/active/Documents/workspace/projects/ivote/app/assets/javascripts",
 		"/Users/active/Documents/workspace/projects/ivote/app/views",
-		"/Users/active/Documents/workspace/projects/ivote/app/views/subjects",
-		"/Users/active/Documents/workspace/projects/ivote/config"
+		"/Users/active/Documents/workspace/projects/ivote/app/views/uploads",
+		"/Users/active/Documents/workspace/projects/ivote/config/environments",
+		"/Users/active/Documents/workspace/projects/ivote/db/migrate",
+		"/Users/active/Documents/workspace/projects/ivote/spec/features",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/assets",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/concerns",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/users",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/config",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/config/environments",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/assets",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/assets/javascripts",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/assets/stylesheets",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/controllers",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/helpers",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/mailers",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/models",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/views",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/views/layouts",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/app/views/uploads",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/config/environments",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/config/initializers",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/db/migrate",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/lib",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/lib/assets",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/lib/tasks",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/public",
+		"/Users/active/Documents/workspace/projects/a3",
+		"/Users/active/Documents/workspace/projects/a3/app/views/articles",
+		"/Users/active/Documents/workspace/projects/a3/app/views/cms",
+		"/Users/active/Documents/workspace/projects/a3/app/views/layouts",
+		"/Users/active/Documents/workspace/projects/a3/app/views/users",
+		"/Users/active/Documents/workspace/projects/a3/spec",
+		"/Users/active/Documents/workspace/projects/a3/spec/features",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/app",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/app/assets",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/app/assets/stylesheets",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/app/controllers",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/app/views"
 	],
 	"file_history":
 	[
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_params.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_article_params.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_activity_params.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_article_mocker.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/layouts/application.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/layouts/_member_menu.html.erb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/assets/stylesheets/custom.css.scss",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/layouts/_header.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/layouts/_footer.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/controllers/subjects_controller.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/controllers/uploads_controller.rb",
+		"/Users/active/Documents/workspace/projects/ivote/db/migrate/20151231060514_alert_options.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/subject_datum.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/options/_list.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/subjects/_form.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/assets/javascripts/subjects.js.coffee",
+		"/Users/active/Documents/workspace/projects/ivote/app/assets/javascripts/application.js",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/template.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/option.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/test.js",
+		"/Users/active/Documents/workspace/projects/ivote/Gemfile",
+		"/Users/active/Documents/workspace/projects/ivote/app/controllers/user_controller.rb",
+		"/Users/active/Documents/workspace/projects/ivote/spec/spec_helper.rb",
+		"/Users/active/Documents/workspace/projects/ivote/spec/features/subject_spec.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/spec_helper.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/environments/test.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/environments/development.rb",
+		"/Users/active/Documents/workspace/projects/a3/Gemfile",
+		"/Users/active/Documents/workspace/projects/a3/Gemfile.lock",
+		"/Users/active/Documents/workspace/projects/a3/spec/features/search_spec.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/features/homepage_spec.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/features/lpf_spec.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_params.rb",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/app/assets/stylesheets/application.css",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/upload.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/style.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/uploads/_basic.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/config/initializers/instant_ads.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/lpf_page.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/custom_matchers.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/views/advantage/account_settings.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/search_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/actv.yml",
+		"/Users/active/Documents/workspace/projects/a3/app/models/search_base.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/features/orgs_spec.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/workers/path_generator.rb",
+		"/Users/active/Documents/workspace/practice/Rails-Carrierwave-jQuery-File-Upload/Gemfile",
+		"/Users/active/Documents/workspace/projects/a3/app/models/activities_search.rb",
+		"/Users/active/Documents/workspace/projects/a3/config/routes.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/webpage_type.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/org_page.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/subjects/show.html.erb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_page.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/support/capybara_helpers.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/options/_form.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/controllers/options_controller.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/controllers/subject_data_controller.rb",
+		"/Users/active/Documents/workspace/projects/ivote/config/routes.rb",
+		"/Users/active/Documents/workspace/projects/ivote/config/environments/development.rb",
+		"/Users/active/Documents/workspace/projects/a3/spec/controllers/notifications_controller_spec.rb",
+		"/Users/active/Documents/workspace/projects/ivote/db/migrate/20151231020437_alert_subject_and_subject_data.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/controllers/my_profile_controller.rb",
+		"/Users/active/Documents/workspace/projects/a3/app/models/user.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/subject.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/assets/stylesheets/custom.css.scss",
+		"/Users/active/Documents/workspace/projects/ivote/app/models/user.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/subjects/index.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/log/development.log",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/uploads/index.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/db/migrate/20151229061417_alert_subject_and_data.rb",
+		"/Users/active/Documents/workspace/projects/rails-practice/blog/Gemfile",
+		"/Users/active/Documents/workspace/projects/ivote/app/helpers/uploads_helper.rb",
+		"/Users/active/Documents/workspace/projects/ivote/config/environments/test.rb",
+		"/Users/active/Documents/workspace/projects/ivote/config/environments/production.rb",
+		"/Users/active/Documents/workspace/projects/ivote/app/assets/stylesheets/application.css",
+		"/Users/active/Documents/workspace/projects/ivote/app/views/options/index.html.erb",
+		"/Users/active/Documents/workspace/projects/ivote/app/assets/stylesheets/bootstrap_and_overrides.css.less",
+		"/Users/active/Documents/workspace/projects/a3/config/deploy/nginx.conf.erb",
+		"/Users/active/Documents/workspace/practice/jquery-fileupload-rails-paperclip-example/Gemfile",
+		"/Users/active/Documents/workspace/projects/ivote/db/schema.rb",
+		"/Users/active/Documents/workspace/projects/ivote/config/environment.rb",
+		"/Users/active/Documents/workspace/projects/ivote/db/migrate/20151228052832_create_uploads.rb",
+		"/Users/active/Documents/workspace/projects/ivote/db/migrate/20151223085230_create_subject_data.rb",
 		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts/application.html.erb",
 		"/Users/active/Documents/workspace/projects/a3/config/deploy/int12.rb",
 		"/Users/active/Documents/workspace/projects/vote/Gemfile",
 		"/Users/active/Documents/workspace/projects/vote/config/database.yml",
-		"/Users/active/Documents/workspace/projects/a3/config/environments/development.rb",
 		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_generator/a3_generator/event.rb",
 		"/Users/active/Documents/workspace/projects/a3/config/sitemap_kids.rb",
 		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_generator/a3_generator/base.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/mailers/path_mailer.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/mailers/sitemap_mailer.rb",
 		"/Users/active/Documents/workspace/projects/a3/lib/tasks/remove_blacklist_attr_path.rake",
-		"/Users/active/Documents/workspace/projects/a3/config/actv.yml",
 		"/Users/active/Documents/workspace/projects/a3/app/workers/glass_signup_worker.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/helpers/asset_helper.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/controllers/application_controller.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/controllers/home_controller.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/controllers/alerts_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/user.rb",
 		"/Users/active/Documents/workspace/projects/a3/app/controllers/kids_controller.rb",
 		"/Users/active/Documents/workspace/projects/a3/config/deploy/int11.rb",
 		"/Users/active/Documents/workspace/projects/a3/config/deploy/jenkins.rb",
@@ -171,7 +401,6 @@
 		"/Users/active/Documents/workspace/projects/ddd",
 		"/Users/active/Documents/workspace/projects/a3/app/models/activity_ribbons_policy/base.rb",
 		"/Users/active/Documents/workspace/projects/a3pi/app/models/api/v2/search/search.rb",
-		"/Users/active/Documents/workspace/projects/a3/Gemfile",
 		"/Users/active/Documents/workspace/projects/a3pi/config/initializers/tire.rb",
 		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/organizers.rb",
 		"/Users/active/Documents/workspace/projects/a3/lib/sitemap_provider/articles.rb",
@@ -189,97 +418,20 @@
 		"/Users/active/Documents/workspace/projects/a3pi/app/controllers/v2/asset_service_controller.rb",
 		"/Users/active/Documents/workspace/projects/a3/public/assets/sitemaps/active/sitemap1.xml",
 		"/Users/active/Documents/workspace/projects/a3/public/assets/sitemaps/sitemap.xml",
-		"/Users/active/Documents/workspace/projects/a3/app/views/my_profile/_form.html.erb",
-		"/Users/active/Documents/workspace/projects/a3/app/views/my_profile/edit.html.erb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/concerns/current_personable.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/person.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/helpers/cookie_helper.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/user_home_address.rb",
-		"/Users/active/Documents/private/english/01.txt",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/api/api_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/config/initializers/devise.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/api/v1/kids_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/users/omniauth_callbacks_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/api/v1/kid_interests_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/config/oauth.yml",
-		"/Users/active/Documents/workspace/projects/a3/app/models/air_traffic/router.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/air_traffic_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/users/sessions_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/assets/javascripts/rails/controllers/asset_service_controller.js",
-		"/Users/active/Documents/workspace/projects/a3/app/assets/javascripts/rails/controllers/articles_controller.js",
-		"/Users/active/Documents/workspace/projects/a3/app/models/stats.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/asset_service_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/config/application.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/landing_page_factory.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/assets/stylesheets/application.css",
-		"/Users/active/Documents/workspace/projects/a3/config/environments/production.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/exhibits/asset_exhibit_base.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/exhibits/event_exhibit.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/kid.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/path.rb",
-		"/Users/active/Documents/workspace/projects/a3/lib/asset_loader.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/exhibits/article_exhibit.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/views/asset_service/show_dynamic.js.erb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/kid_interest.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/interest.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/views/articles/show.html.erb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/articles_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/helpers/article_helper.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/air_traffic/lpf_route.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/controllers/cms_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/assets/javascripts/libs/ckeditor/ckeditor.js",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/show.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/comments/new.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/comments/_list.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/comments/_form.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/comments_controller.rb",
-		"/Users/active/Documents/workspace/projects/a3/app/models/air_traffic/route.rb",
-		"/Users/active/Documents/workspace/projects/a3/doc/integration_servers.md",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/config/routes.rb",
-		"/Users/active/Documents/workspace/projects/a3/config/deploy/int14.rb",
-		"/Users/active/Documents/workspace/projects/a3/lib/ext/string.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/show.json.jbuilder",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/users_helper.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/application_controller.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/sessions/new.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/index.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/follows_helper.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/comments_helper.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/mircoposts_helper.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/config/environment.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/mircoposts/_form.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/assets/stylesheets/scaffolds.scss",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/mircopost.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/message.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/messages_controller.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/Gemfile",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts/_header.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/sessions_helper.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/models/user.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/controllers/session_controller_spec.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/requests/users_signups_spec.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/requests/users_logins_spec.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/spec/requests/site_layouts_spec.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/test/integration/users_login_test.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/users_controller.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/layouts/_footer.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/assets/stylesheets/custom.css.scss",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/sessions_controller.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/helpers/application_helper.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/users/_signup_form.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/views/users/show.html.erb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/app/controllers/session_controller.rb",
-		"/Users/active/Documents/workspace/projects/rails-practice/blog/test/integration/users_signup_test.rb"
+		"/Users/active/Documents/workspace/projects/a3/app/views/my_profile/_form.html.erb"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 50.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/active/Documents/workspace/practice/puffing-billy-0.6.2",
+			"/Users/active/Documents/workspace/projects/a3/",
+			"/Users/active/Documents/workspace/projects/a3/spec",
 			"/Users/active/Documents/workspace/projects/a3/",
 			"/Users/active/Documents/workspace/projects/a3/app",
 			"/Users/active/Documents/workspace/projects/a3/",
@@ -291,6 +443,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"on_message_complete\non_message_complete",
+			"disabled_request",
+			"cacheable",
+			"store",
+			"CACHE KEY",
+			"addressable",
+			"eventmachine",
+			"reset_condition",
+			"WebMock.allow_net_connect!\n      VCR.turned_off { example.run }\n      WebMock.disable_net_connect!\n    end\n    ",
+			"do",
+			"js",
+			"phant",
+			"64.95",
+			"expect_per_page",
+			"results-list",
+			"set_init",
+			"have_valid_factory",
+			"display_flash_notice",
+			"have_body_content",
+			"article_count",
+			"to_que",
+			"PathGenerator",
+			"SearchPage",
+			"select_date",
+			"Billy",
+			"select_date",
+			"login_admin",
+			"capybara",
+			"group",
+			"subject_datum",
+			"@subject_datum",
+			"innerHTML",
+			"blueimpFileupload",
 			"PathMailer",
 			"branch",
 			"mail",
@@ -332,6 +517,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"reset",
+			"normal_activities_per_page",
+			"reset",
+			"f",
+			"data_form"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -342,53 +532,111 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "app/models/subject.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 190,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								308,
-								308
+								53,
+								53
 							]
 						],
 						"settings":
 						{
-							"is_xml": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "config/routes.rb",
+					"file": "/Users/active/Documents/workspace/projects/a3/config/actv.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1714,
+						"buffer_size": 1078,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								118,
-								118
+								745,
+								745
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/features/homepage_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								290
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/spec_helper.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1222,
+								1222
 							]
 						],
 						"settings":
@@ -401,24 +649,83 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/models/subject.rb",
+					"buffer": 4,
+					"file": "/Users/active/Documents/workspace/projects/a3/Gemfile.lock",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 80,
+						"buffer_size": 15308,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75,
-								75
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10732.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/features/search_spec.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4981,
+								4981
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 98,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
 							]
 						],
 						"settings":
@@ -429,35 +736,338 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/views/subjects/show.html.erb",
-					"semi_transient": true,
+					"buffer": 7,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 300,
+						"buffer_size": 4327,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										190,
+										199
+									],
+									[
+										492,
+										501
+									],
+									[
+										696,
+										705
+									],
+									[
+										1087,
+										1096
+									],
+									[
+										1564,
+										1569
+									],
+									[
+										1919,
+										1924
+									],
+									[
+										2193,
+										2198
+									],
+									[
+										2241,
+										2246
+									],
+									[
+										2612,
+										2617
+									],
+									[
+										2850,
+										2855
+									],
+									[
+										3378,
+										3383
+									],
+									[
+										3654,
+										3659
+									],
+									[
+										4028,
+										4044
+									],
+									[
+										4118,
+										4134
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								4276,
+								4295
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 4,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1785.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/handlers/proxy_handler.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4252,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								208,
-								208
+								3437,
+								3437
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 33.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/active/Documents/workspace/practice/puffing-billy-0.6.2/lib/billy/cache.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4236,
+								4236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_mocker.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/support/page_objects/search_mocker/search_activity_mocker.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_activity_mocker.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_article_params.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_activity_params.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/Users/active/Documents/workspace/projects/a3/spec/support/search_mocker/search_article_mocker.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -494,6 +1104,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -502,7 +1116,7 @@
 	"project": "ivote.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 94.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -511,6 +1125,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"instan",
+				"a3/config/instant_ads.yml"
+			],
+			[
+				"instant",
+				"a3/config/initializers/instant_ads.rb"
+			]
 		],
 		"width": 0.0
 	},
@@ -540,7 +1162,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 333.0,
+	"side_bar_width": 307.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

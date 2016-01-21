@@ -12,6 +12,8 @@
   <% end %>
     <%= f.input :name %>
     <%= f.input :topic %>
+    <%= f.input :template_id, collection: @templates, prompt: "Choose a Template",  selected: @subject.template_id %>
+    <%= f.input :style_id, collection: @styles, prompt: "Choose a Style", selected: @subject.style_id  %>
     <%= f.association :user, label_method: :email, value_method: :id, prompt: "Choose a User"%>
 
     <%= render :partial => '/uploads/basic' %>
@@ -19,10 +21,8 @@
     <%= f.simple_fields_for :subject_datum do |data_form| %>
       <%= data_form.input :topic_img, as: :hidden %>
       <%= data_form.input :description %>
-      <%= data_form.input :start_time, as: :datetime %>
-      <%= data_form.input :end_time, as: :datetime %>
-      <%= data_form.input :template %>
-      <%= data_form.input :style, as: :select, collection: [ "Red", "Blue", "green", "yellow" ], prompt: "Choose a style" %>
+      <%= data_form.input :start_time , input_html: {:class => 'form_datetime'} %>
+      <%= data_form.input :end_time, input_html: {:class => 'form_datetime'} %>
       <%= data_form.input :type %>
     <% end %>
 
@@ -30,7 +30,12 @@
     <%= f.button :submit, name: 'commit'%>
 
 <% end %>
+
+
 <script>
+
+$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+
 function checkform(){
   if ($('#subject_subject_datum_topic_img') != ''){
     return true;

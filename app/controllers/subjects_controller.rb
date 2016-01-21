@@ -1,4 +1,5 @@
-class SubjectsController < ApplicationController
+class SubjectsController < UserController
+  # before_action :authenticate_user!
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   # GET /subjects
@@ -19,6 +20,8 @@ class SubjectsController < ApplicationController
     @subject = Subject.new
     @subject_datum = SubjectDatum.new
     #@subject.subject_datum.build
+    @templates = Template.all.map{ |r| [r.name, r.id]}
+    @styles = Style.all.map{ |r| [r.name, r.id]}
   end
 
   # GET /subjects/1/edit
@@ -29,10 +32,10 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = Subject.new(subject_params)
-    binding.pry
-    @subject_data = SubjectDatum.new(subject_params[:subject_datum])
+  
     respond_to do |format|
       if @subject.save 
+        @subject_data = SubjectDatum.new(subject_datum_params.merge(:subject_id => @subject.id))
         if @subject_data.save
           format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
           format.json { render :show, status: :created, location: @subject }
@@ -80,7 +83,11 @@ class SubjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subject_params
-      params.require(:subject).permit(:name, :user_id, :topic, :subject_datum)
+      params.require(:subject).permit(:name, :user_id, :topic)
+    end
+
+    def subject_datum_params
+      params.require(:subject).require(:subject_datum).permit(:topic_img, :description, :start_time, :end_time, :type)
     end
 
 end
