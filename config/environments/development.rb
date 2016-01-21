@@ -36,6 +36,8 @@ Ivote::Application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   Paperclip.options[:command_path] = "/usr/local/bin/"
   Paperclip.options[:log] = true
   # Paperclip.registered_attachments_styles_path = '/tmp/config/paperclip_attachments.yml'

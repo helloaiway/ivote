@@ -1,4 +1,4 @@
-class SubjectDataController < ApplicationController
+class SubjectDataController < UserController
   before_action :set_subject_datum, only: [:show, :edit, :update, :destroy]
 
   # GET /subject_data
