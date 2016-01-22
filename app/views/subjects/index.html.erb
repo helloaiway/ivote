@@ -1,31 +1,146 @@
-<p id="notice"><%= notice %></p>
+<!-- RIBBON -->
+<div id="ribbon">
 
-<h1>Listing Subjects</h1>
+  <span class="ribbon-button-alignment"> <span id="refresh" class="btn btn-ribbon" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true"><i class="fa fa-refresh"></i></span> </span>
 
-<table class="table ">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th>Topic</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <!-- breadcrumb -->
+  <ol class="breadcrumb">
+    <li>
+      投票主题
+    </li>
+    <li>
+      主题列表
+    </li>
+  </ol>
+  <!-- end breadcrumb -->
 
-  <tbody>
-    <% @subjects.each do |subject| %>
-      <tr>
-        <td><%= subject.name %></td>
-        <td><%= subject.user_id %></td>
-        <td><%= subject.topic %></td>
-        <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <!-- You can also add more buttons to the
+  ribbon for further usability
 
-<br>
+  Example below:
 
-<%= link_to 'New Subject', new_subject_path %>
+  <span class="ribbon-button-alignment pull-right">
+  <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+  <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+  <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+  </span> -->
+
+</div>
+<!-- END RIBBON -->
+<!-- MAIN CONTENT -->
+<div id="content">
+
+  <!-- widget grid -->
+  <section id="widget-grid" class="">
+
+    <div class="well">
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="Search...">
+        <div class="input-group-btn">
+          <button class="btn btn-default btn-primary" type="button">
+            <i class="fa fa-search"></i> 搜索
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- row -->
+    <div class="row">
+      <!-- NEW WIDGET START -->
+      <article class="col-sm-12 col-md-12 col-lg-12">
+          <!-- Widget ID (each widget will need unique ID)-->
+          <div class="jarviswidget jarviswidget-color-greenDark" id="wid-id-0" data-widget-fullscreenbutton="true" data-widget-colorbutton="false" data-widget-editbutton="false">
+            <!-- widget options:
+            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+    
+            data-widget-colorbutton="false"
+            data-widget-editbutton="false"
+            data-widget-togglebutton="false"
+            data-widget-deletebutton="false"
+            data-widget-fullscreenbutton="false"
+            data-widget-custombutton="false"
+            data-widget-collapsed="true"
+            data-widget-sortable="false"
+    
+            -->
+            <header>
+              <div class="jarviswidget-ctrls" role="menu">
+                 <a data-placement="bottom" title="" rel="tooltip" class="button-icon jarviswidget-fullscreen-btn" href="javascript:void(0);" data-original-title="Fullscreen"><i class="fa fa-resize-full "></i></a> 
+              </div>
+              <span class="widget-icon"> <i class="fa fa-eye"></i> </span>
+              <h2>投票主题列表</h2>
+
+            </header>
+            <!-- widget div-->
+            <div>
+    
+              <!-- widget edit box -->
+              <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+    
+              </div>
+              <!-- end widget edit box -->
+              <div class="widget-body-toolbar">
+                      
+                      <div class="row">
+                        
+                        <div class="col-xs-9 col-sm-5 col-md-5 col-lg-5">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" placeholder="Filter" id="prepend" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
+                          
+                          <button class="btn btn-success">
+                            <i class="fa fa-plus"></i> <span class="hidden-mobile">创建投票</span>
+                          </button>
+                          
+                        </div>
+                        
+                      </div>
+                      
+                        
+        
+                    </div>
+
+              <!-- widget content -->
+              <div class="widget-body no-padding">
+                <table class="table table-hover table-striped">
+                    <thead>
+                      <tr>
+                        <th>主题名称</th>
+                        <th>用户</th>
+                        <th>主题类别</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                       <% @subjects.each do |subject| %>
+                        <tr>
+                          <td><%= subject.name %></td>
+                          <td><%= subject.user_id %></td>
+                          <td><%= subject.topic %></td>
+                          <td><%= link_to 'Show', subject %>
+                          <%= link_to 'Edit', edit_subject_path(subject) %>
+                          <%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+
+
+              </div>
+
+          </div>
+
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+
+  <%= link_to 'New Subject', new_subject_path %>
+</div>

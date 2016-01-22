@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :options
   resources :subjects
   resources :uploads
+  resources :members
   devise_for :users
   root "subjects#index"
   # The priority is based upon order of creation: first created -> highest priority.

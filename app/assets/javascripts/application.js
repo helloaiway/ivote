@@ -22,4 +22,3 @@
 //= require jquery-fileupload/jquery.fileupload-audio
 //= require jquery-fileupload/jquery.fileupload-video
 //= require jquery-fileupload/jquery.fileupload-validate
-//= require bootstrap-datetimepicker
